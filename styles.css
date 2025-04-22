@@ -99,26 +99,26 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 50pt;
+    font-size: 35pt;
     font-weight: 900;
     margin-bottom: 0.5rem;
    
 }           
 h2 {
-    font-size: 45pt;
+    font-size: 30pt;
     font-weight: 800;
     margin-bottom: 0.5rem;
 }
    
 h3 {
-    font-size: 40pt;
+    font-size: 25pt;
    
    
    
 }       
 h4 {
     margin-bottom: 0.5rem;
-    margin-bottom: 30pt;
+    margin-bottom: 20pt;
     font-family: var(--montserrat);
 
 }
@@ -126,7 +126,7 @@ h4 {
 p, q {
     font-family: var(--montserrat);
     color: var(--black);
-    font-size: 20pt;
+    font-size: 15pt;
 }
 
 
@@ -248,7 +248,7 @@ header img {
     place-items: center;
     right: 0;
     padding: 0.8rem 0;
-    width: 200px;
+    width: 175px;
     height: 25px;
     background: var(--yellow);
     font: 600 0.8rem var(--montserrat);
@@ -263,7 +263,7 @@ header img {
     list-style-type: none;
     top: 48px;
     right: 64px;
-    width: 135px;
+    width: 110px;
 }
 
 #menu-toggle li > a {
@@ -312,7 +312,6 @@ header img {
 #intro p {
     
     color: var(--dark-gray);
-    font-size: 16pt;
     line-height: 1.5;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -379,7 +378,7 @@ header img {
 #plan h4 {
     font: var(--montserrat);
     text-transform: uppercase;
-    font-size: 20pt;
+    
     font-weight: 600;
     color: var(--dark-gray);
     
@@ -400,7 +399,7 @@ header img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem 2rem 2rem 2rem;;
+    padding: 1rem 2rem 2rem 2rem;;
 }
 
 #testimonials img {
@@ -426,7 +425,6 @@ header img {
 
 #testimonials h4 {
     text-transform: uppercase;
-    font-size: 30pt;
     padding: 0 1rem;
     color: var(--dark-gray);
     font-weight: bold;
@@ -440,7 +438,7 @@ header img {
     font-family: var(--montserrat);
     text-align: center;
     font-style: italic;
-    font-size: 20pt;
+   
     line-height: 1.5rem;
     padding: 0 1rem;
    
@@ -460,17 +458,17 @@ header img {
 
 
 #about h3 {
-    font-size: 40pt;
+    
     color: var(--dark-gray);
     font-family: var(--molle);
     padding-bottom: 2rem;
     padding-right: 0rem;
     text-align: left;
-    padding-left: 2rem;
+    padding-left: 1rem;
 }
 
 #about h4 {
-    font-size: 20pt;
+    
     font-weight: bold;
     color: var(--dark-gray);
     font-family: var(--montserrat);
@@ -484,7 +482,7 @@ header img {
     grid-template-rows: auto auto;
     justify-items: center; 
     align-items: start; 
-    grid-row-gap: 2rem;
+    grid-row-gap: 1rem;
     
 }
 
@@ -493,26 +491,26 @@ header img {
     flex-direction: column;
     align-items: center; 
     text-align: center;
-    max-width: 300px;
+   
 }
 
 #about div img {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     margin-bottom: 1rem;
 }
 
 #about div p {
     font-family: var(--montserrat);
     color: var(--dark-gray);
-    font-size: 20pt;
+    
     
 }
 #about > div > section:first-of-type > p {
-    width: 250px;
+    width: 100px;
 }
 #about > div > section:last-of-type > img {
-    width: 150px;
+    width: 100px;
     padding-right: 0; 
 }
 
@@ -530,7 +528,7 @@ header img {
 #contact h3 span {
     font-family: var(--montserrat);
     font-style: italic;
-    font-size: 20pt;
+    
 }
 #contact h3 {
     padding-bottom: 1rem;
@@ -674,7 +672,7 @@ footer a {
     color: var(--dark-gray));
    
     font-family: var(--montserrat);
-    font-size: 16pt;
+    font-size: 14pt;
 }
 
 /*--------Media Queries tablet medium screens------------------*/
@@ -682,6 +680,14 @@ footer a {
 
 @media screen and (min-width: 762px) {
   
+    header img {
+        width: 160px;
+        height: 69px;
+        padding-left: .75rem;
+        padding-bottom: 1.5rem;
+    }
+    
+
     header {
         grid-template-columns: 180px calc(100% - 180px);
         grid-template-rows: auto;
@@ -925,6 +931,14 @@ footer p, footer a {
     
    /* ----- Large Screen----- */
 @media only screen and (min-width: 1024px) {
+
+    header img {
+        width: 236px;
+        height: 103px;
+        padding-left: 1rem;
+        padding-bottom: 1.5rem;
+    }
+    
     
         header {
             padding-top: 0;
@@ -953,13 +967,20 @@ footer p, footer a {
             padding-bottom: 3.5rem;
             display: grid;
             gap: 1rem;
-            grid-template-columns: 40% 60%;
+            
             grid-template-rows: 15px auto;
             grid-template-areas:
                 "introHeader introImages"
                 "introContent introImages"
         }
-    
+        
+        #into img {
+
+            width: auto;
+            height: auto;
+            padding: 0;
+            display: block;
+        }
         #intro h2 {
             grid-area: introHeader;
         }
