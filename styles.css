@@ -1,0 +1,1111 @@
+/*-----------GIT 414 Jaime Lee Creta------------ */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*------------------Global Styles--------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Molle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /*------ Fonts---------- */
+    --montserrat: "Montserrat", sans-serif;
+    --molle: "Molle", cursive;
+
+}
+
+
+
+
+/*--------Mobile/Global Styles------------------*/
+
+
+
+body {
+    line-height: 1.5;
+    
+  }
+  html,
+  body {
+      background: linear-gradient(to bottom, var(--teal) 1%, var(--white) 7%);
+      overflow-x: hidden;
+  }
+
+ p, q, small, nav, button, form {
+    font-family: var(--montserrat);
+    color: var(--dark-gray);
+    font-size: 20pt;
+
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--molle);
+    color: var(--dark-gray);
+}
+
+h1 {
+    font-size: 50pt;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+   
+}           
+h2 {
+    font-size: 45pt;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+   
+h3 {
+    font-size: 40pt;
+   
+   
+   
+}       
+h4 {
+    margin-bottom: 0.5rem;
+    margin-bottom: 30pt;
+    font-family: var(--montserrat);
+
+}
+
+p, q {
+    font-family: var(--montserrat);
+    color: var(--black);
+    font-size: 20pt;
+}
+
+
+/* skip link-sc */
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+.sr-only {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+/*---Hover State Yellow----*/
+a:hover,
+button:hover,
+input:hover,
+select:hover,
+textarea:hover,
+[role="button"]:hover {
+  outline: 4px solid var(--yellow);
+  outline-offset: 1px;
+}
+
+/*--- Focus State Purple - Keyboard Accessibility--- */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[role="button"]:focus {
+  outline: 4px solid var(--purple);
+  outline-offset: 1px;
+}
+
+/*-----Focus-WITHIN State Parent Containers--- */
+
+.container:focus-within {
+  outline: 4px solid var(--purple);
+  outline-offset: 1px;
+}
+
+a, button, input, select, textarea {
+    transition: outline 0.2s ease;
+  }
+/*----Header------------*/
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    padding-bottom: 1.5rem;
+    width:100vw;
+    
+    
+}
+header > a {
+    order: 0;
+    padding-top: 0.7rem;
+}
+header > nav {
+    order: 1;
+    margin-top: 16px;
+   
+}
+header > h1 {
+    order: 2;
+    grid-column: 1 / -1;
+    padding-left: 2rem;
+}
+
+header h2 {
+    position: absolute;
+    margin-left: -1000%;
+    padding-left: 2rem;
+}
+
+header > p {
+    order: 3;
+    grid-column: 1 / -1;;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+header img {
+    width: 160px;
+    height: 59px;
+    padding-left: .75rem;
+    padding-bottom: 1.5rem;
+}
+
+
+/*--------menu toggle-------*/
+#menu-toggle input { 
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    z-index: 1;
+  }
+  
+  #menu-toggle label {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    right: 0;
+    padding: 0.8rem 0;
+    width: 200px;
+    height: 25px;
+    background: var(--yellow);
+    font: 600 0.8rem var(--montserrat);
+    text-transform: uppercase;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+  }
+  #menu-toggle ul {
+    position: absolute;
+    width: calc(175px - 4rem);
+    list-style-type: none;
+    top: 48px;
+    right: 64px;
+    width: 135px;
+}
+
+#menu-toggle li > a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--black);
+    font-weight: 550;
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: var(--teal);
+    color: var(--black);
+    border-bottom: 1px solid var(--black);
+    padding: 0px;
+    height: 0px;
+   
+}
+
+
+#menu-toggle label:hover,
+#menu-toggle input:checked + label {
+    color: var(--white);
+    background: var(--dark-gray);
+    
+}
+#menu-toggle input:checked ~ ul {
+    top: 57px;
+}
+#menu-toggle input:checked ~ ul > li > a {
+    padding: 2rem;
+    height: fit-content;
+}
+
+/*------------------Main Content------------------*/
+/*--------Intro and pics grid-----*/
+
+#main {
+    padding-left: 2rem;
+}
+
+#intro h2 {
+    padding: 1.75rem;
+}
+
+#intro p {
+    
+    color: var(--dark-gray);
+    font-size: 16pt;
+    line-height: 1.5;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+#img-grid img {
+    width: 100vw;
+   
+
+}
+#img-grid img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+#img-grid img:active {
+    transform: scale(1.0);
+    transition: transform 0.3s ease;
+}
+
+#img-grid {
+    display: grid;
+    gap: 25px;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+/*--------Plan Trip--------*/
+#plan {
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    background-color: var(--yellow);
+   
+   
+}
+
+#plan section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 3px solid var(--white);
+    background-color: var(--teal);
+    margin-top: 3px;
+    padding: 1rem 1rem 2rem 1rem;
+    height: 10rem;
+    width: 24rem;
+    height: 17rem;
+   
+
+}
+
+ #plan h3 {
+    color: var(--dark-gray);
+    
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+
+   
+}
+
+#plan h4 {
+    font: var(--montserrat);
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-weight: 600;
+    color: var(--dark-gray);
+    
+   
+}
+
+#plan div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+/*--------Testimonials--------*/
+
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 2rem 2rem 2rem;;
+}
+
+#testimonials img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+
+#testimonials div section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#testimonials img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+#testimonials h4 {
+    text-transform: uppercase;
+    font-size: 30pt;
+    padding: 0 1rem;
+    color: var(--dark-gray);
+    font-weight: bold;
+    font-family: var(--montserrat);
+    margin-bottom: 0.5rem;
+}
+#testimonials q::before, #testimonials q::after {
+    content: "\""
+}
+#testimonials q {
+    font-family: var(--montserrat);
+    text-align: center;
+    font-style: italic;
+    font-size: 20pt;
+    line-height: 1.5rem;
+    padding: 0 1rem;
+   
+}
+
+/*--------About Destination--------*/
+#about {
+    background-color: var(--blue);
+   
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+#about h3 {
+    font-size: 40pt;
+    color: var(--dark-gray);
+    font-family: var(--molle);
+    padding-bottom: 2rem;
+    padding-right: 0rem;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+#about h4 {
+    font-size: 20pt;
+    font-weight: bold;
+    color: var(--dark-gray);
+    font-family: var(--montserrat);
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+#about div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center; 
+    align-items: start; 
+    grid-row-gap: 2rem;
+    
+}
+
+#about div section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    max-width: 300px;
+}
+
+#about div img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+#about div p {
+    font-family: var(--montserrat);
+    color: var(--dark-gray);
+    font-size: 20pt;
+    
+}
+#about > div > section:first-of-type > p {
+    width: 250px;
+}
+#about > div > section:last-of-type > img {
+    width: 150px;
+    padding-right: 0; 
+}
+
+/*--------Contact Us--------*/
+
+#contact, form, #contact div:not(.custom-select) {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact {
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+#contact h3 span {
+    font-family: var(--montserrat);
+    font-style: italic;
+    font-size: 20pt;
+}
+#contact h3 {
+    padding-bottom: 1rem;
+    
+}    
+   
+#contact #names label,
+#contact #selects label,
+#contact #nums > label,
+#contact fieldset legend {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#contact fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+#contact fieldset label {
+    display: flex;
+    align-items: center;
+}
+.radio-input, input[type="radio"] {
+    margin-right: 8px;
+
+}
+.radio-input input {
+    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--white);
+    width: 70px;
+    height: 70px;
+    border: 3px solid var(--purple);
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+}
+#contact label span:not(.radio-label),
+#contact legend span:not(.radio-label) {
+    color: var(--purple);
+    margin-left: 5px;
+}    
+.radio-input input::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+}
+.radio-input input:checked::before {
+    border: 5px solid var(--purple);
+    background: var(--purple);
+
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+#contact input, #contact .custom-select select {
+    margin-bottom: 1rem;
+    padding: .75rem;
+    padding-bottom: 1rem;
+    padding-left: .75rem;
+    font-size: 1.5rem;
+    border: 3px solid var(--purple);
+   
+}
+
+.custom-select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-overflow: '';
+    width: 100%;
+    max-width: calc(100% - 5px);
+    
+}
+
+
+
+.custom-select::after {
+    z-index: 5;
+    position: relative;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-right: 0.2em solid var(--purple);
+    border-top: 0.2em solid var(--purple);
+    transform: rotate(135deg);
+    margin-bottom: 25px;
+    margin-left: -45px;
+}
+
+
+select::-ms-expand {
+    display: none;
+}
+#contact input[type="submit"] {
+    background-color: var(--purple);
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+}
+
+/* footer styles */
+
+footer {
+    background-color: var(--light-gray);
+    display: grid;
+    gap: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+}
+
+
+footer p {
+    padding-bottom: 0.5rem;
+    font-family: var(--montserrat);
+    font-size: 16pt;
+    padding-bottom: .75rem;
+
+}
+footer a {
+    text-decoration: none;
+    color: var(--dark-gray));
+   
+    font-family: var(--montserrat);
+    font-size: 16pt;
+}
+
+/*--------Media Queries tablet medium screens------------------*/
+
+
+@media screen and (min-width: 762px) {
+  
+    header {
+        grid-template-columns: 180px calc(100% - 180px);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "logo header"
+            "logo content"
+            "nav nav"
+    }
+
+    header a {
+        grid-area: logo;
+    }
+
+    header img {
+        width: 236px;
+        height:103px;
+        padding-top: .25rem;
+    }
+
+    header h1, header p {
+        padding-left: 4rem;
+    }
+
+    header h1 {
+        grid-area: header;
+        padding-top: 2rem;
+        
+    }
+
+    header p {
+        padding-right: 4rem;
+        grid-area: content;
+    }
+
+    header nav {
+        width: 100vw;
+        grid-column: 1 / -1;
+        grid-area: nav;
+    }
+
+    #menu-toggle {
+        position: relative;
+    }
+
+    #menu-toggle ul {
+        position: unset;
+        display: flex
+;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        right: 0;
+        margin-top: .5rem;
+    }
+
+    #menu-toggle input, #menu-toggle label {
+        position: absolute;
+        left: -1000%;
+    }
+
+    #menu-toggle li a {
+        background-color: var(--white);
+        padding: 1.5rem;
+        border-width: 0px;
+        margin: 0 5px;
+        width: 6.5rem;
+        height: .75rem;
+    }
+
+    #menu-toggle li a:hover {
+        background-color: var(--yellow);
+    }
+
+    /*-----intro section--------- */
+    #intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        padding-right: 4rem;
+       
+    }
+
+     div #intro h2 {
+        
+        text-align: left;
+    }
+
+    #intro p {
+        
+        font-size: 20pt;
+    }
+    
+    
+    #img-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem; 
+        padding-left: 1rem;
+        padding-right: 1rem;
+    
+}
+
+    #img-grid picture {
+        grid-column: span 2;
+        
+}
+
+    #img-grid img {
+        width: 100%;
+        padding: 0; 
+        display: block;
+
+}
+
+ /*--------Plan Trip--------*/
+
+ #plan {
+   
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background-color: var(--yellow);
+
+ }
+
+#plan div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#plan div section {
+    margin-top: 0;
+}
+
+#plan div section:nth-of-type(1),
+#plan div section:nth-of-type(3) {
+    justify-self: end;
+}
+
+#plan h4 {
+    font-size: 22pt;
+    font-weight: semi-bold;
+    color: var(--dark-gray);
+    font-family: var(--montserrat);
+}
+
+#plan img {
+    margin-top: 0.5rem;
+}
+
+#plan section img {
+    height: 55%;
+}
+
+#plan section {
+    height: 60%;
+    width: 85%;
+}
+
+/*--------Testimonials--------*/
+
+#testimonials {
+    padding: 2rem 4rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#testimonials h3 {
+    width: 100%;
+    text-align: left;
+}
+
+#testimonials div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+}
+
+#testimonials p, #testimonials q {
+    padding: 0;
+}
+
+ /*--------- about-------- */
+
+
+
+section #about {
+    padding-left: 0rem;
+}
+
+#about div  {
+    margin: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-left: 0rem;
+}
+
+
+/*--Contact Us--------*/
+
+#contact input[type="submit"] {
+    width: 300px;
+    height: 100px;
+    align-self: flex-end;
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+}
+
+#contact fieldset {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content:space-between;
+        
+}
+/*----- footer------- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+   
+}
+
+footer p, footer a {
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+}
+}
+    
+   /* ----- Large Screen----- */
+@media only screen and (min-width: 1024px) {
+    
+        header {
+            padding-top: 0;
+        }
+    
+        header nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: fit-content;
+        }
+    
+        #menu-toggle ul {
+            margin-top: 0;
+        }
+    
+        #menu-toggle ul li a {
+            margin-right: 0;
+            margin-left: 0.8rem;
+            padding: 0.5rem 1rem;
+        }
+    
+        /* laptop responsive intro */
+        #intro {
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 15px auto;
+            grid-template-areas:
+                "introHeader introImages"
+                "introContent introImages"
+        }
+    
+        #intro h2 {
+            grid-area: introHeader;
+        }
+    
+        #intro p {
+            grid-area: introContent;
+        }
+    
+        #img-grid {
+            grid-area: introImages;
+            width: fit-content;
+            gap: 10px;
+        }
+    
+        /*----------- plan--------------- */
+    
+        #plan {
+            padding-top: var(--page-padding);
+            padding-bottom: var(--page-padding);
+        }
+    
+        #plan section {
+            max-width: 285px;
+        }
+    
+        #plan div {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    
+        #plan h4 {
+            font-size: 1rem;
+        }
+    
+        #plan img {
+            margin-top: 0;
+            height: 65% !important;
+        }
+    
+        #plan div section {
+            justify-content: space-between;
+            padding-bottom: 1.2rem;
+            padding-top: 0.5rem;
+        }
+    
+        /*----------testimonials------------ */
+    
+       
+        #testimonials div {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    
+        #testimonials div section h4 {
+            font-size: 1rem;
+        }
+    
+        #testimonials div section p,
+        #testimonials div section q {
+            font-size: 0.8rem;
+            line-height: 1.1rem;
+        }
+    
+        #testimonials div section q {
+            max-width: 350px !important;
+        }
+    
+        /*----------about-------------  */
+        
+    
+        #about > div > section > p {
+            font-size: 0.8rem;
+            margin-top: 0;
+        }
+    
+        #about > div > section > h4 {
+            margin-top: 1rem;
+        }
+    
+        
+        #about > div > section:first-of-type > p {
+            overflow: auto;
+            text-overflow: unset;
+            width: fit-content;
+            grid-column: 1 / -1;
+        }
+    
+        #about > div > section:first-of-type::after {
+            content: "";
+            width: 0;
+        }
+    
+        /* -------contact us------------ */
+     
+    
+        #contact form {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    
+        #contact form #nums {
+            margin: 0 0.75rem;
+        }
+    
+        #contact form #names label,
+        #contact form #selects label,
+        label[for="email"],
+        label[for="phone"] {
+            margin-top: 0.25rem;
+        }
+    
+        fieldset {
+            margin-bottom: 0.3rem;
+        }
+    
+        #contact form div {
+            width: calc((100vw - var(--page-padding) - var(--page-padding) - 1rem) / 3)
+        }
+    
+        #contact label span:not(.radio-label) {
+            margin: 0;
+        }
+    
+        #contact input[type="submit"] {
+            padding: 1rem;
+            margin-bottom: 0;
+            margin-top: 2.175rem;
+            width: 50%;
+        }
+    
+        /* ------footer-------------- */
+        footer {
+            display: grid;
+            gap: 0;
+            padding-left: var(--page-padding);
+            padding-right: var(--page-padding);
+            width: calc(100vw - (var(--page-padding) * 2));
+            grid-template-columns: 70% 15% 15%;
+        }
+    
+        footer p {
+            text-align: left;
+        }
+    
+        footer a {
+            text-align: right;
+        }
+    }
+    
+   
+    
