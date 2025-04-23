@@ -66,15 +66,8 @@ table {
     /*------ Fonts---------- */
     --montserrat: "Montserrat", sans-serif;
     --molle: "Molle", cursive;
-
 }
-
-
-
-
 /*--------Mobile/Global Styles------------------*/
-
-
 
 body {
     line-height: 1.5;
@@ -280,7 +273,6 @@ header img {
     border-bottom: 1px solid var(--black);
     padding: 0px;
     height: 0px;
-   
 }
 
 
@@ -310,7 +302,6 @@ header img {
 }
 
 #intro p {
-    
     color: var(--dark-gray);
     line-height: 1.5;
     padding-left: 2rem;
@@ -344,9 +335,7 @@ header img {
     margin-top: 1rem;
     padding-bottom: 2rem;
     background-color: var(--yellow);
-   
-   
-}
+   }
 
 #plan section {
     display: flex;
@@ -361,18 +350,13 @@ header img {
     height: 10rem;
     width: 24rem;
     height: 17rem;
-   
-
-}
+   }
 
  #plan h3 {
     color: var(--dark-gray);
-    
-    padding-top: 2rem;
+     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: 2rem;
-
-   
 }
 
 #plan h4 {
@@ -381,9 +365,7 @@ header img {
     font-size: 18pt;
     font-weight: 600;
     color: var(--dark-gray);
-    
-   
-}
+    }
 
 #plan div {
     display: flex;
@@ -622,8 +604,6 @@ select {
     
 }
 
-
-
 .custom-select::after {
     z-index: 5;
     position: relative;
@@ -686,36 +666,27 @@ footer a {
         height: 69px;
         padding-left: .75rem;
         padding-bottom: 1.5rem;
-    }
+	}
     
     p, q, small, nav, button, form {
         font-size: 20pt;
-    
-    }
+    	}
     
     h1 {
         font-size: 40pt;
-    
-       
-    }           
+    	}           
     h2 {
         font-size:35pt;
-        
-    }
+        }
        
     h3 {
         font-size: 30pt;
-       
-       
-       
-    }       
+       }       
    
     h4 {
         font-size: 25pt;
-        
-    }
-
-
+        }
+    
     p, q {
         font-family: var(--montserrat);
         color: var(--black);
@@ -857,10 +828,7 @@ footer a {
     padding-left: 4rem;
     padding-right: 4rem;
     background-color: var(--yellow);
-
     }
-
-
 
     #plan div {
     display: grid;
@@ -871,8 +839,6 @@ footer a {
     #plan div section {
     margin-top: 0;
     }
-
-  
 
     #plan h4 {
     font-size: 18pt;
@@ -931,9 +897,7 @@ footer a {
     padding-left: 4rem;
     padding-right:4rem;
     }
-
-
-
+  
     #about div  {
     margin: 2rem;
     display: flex;
@@ -942,7 +906,6 @@ footer a {
     margin-top: 0;
 
     }
-
 
     /*--Contact Us--------*/
     #contact {
@@ -1036,8 +999,7 @@ footer a {
     #intro {
         padding-top: 4rem;
         padding-bottom: 3rem;
-        display: grid
-;
+        display: grid;
         gap: 1rem;
         grid-template-columns: 45% 55%;
         grid-template-rows: 15px auto;
@@ -1104,8 +1066,7 @@ footer a {
 
     /*----------testimonials------------ */
 
-    
-    #testimonials div {
+     #testimonials div {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
@@ -1116,15 +1077,10 @@ footer a {
         
     }
 
- 
-
-    /*----------about-------------  */
-    
-
-    #about div {
+/*----------about-------------  */
+     #about div {
         margin: 3rem;
-        display: flex
-;
+        display: flex;
         align-items: flex-start;
         justify-content: space-around;
         margin-top: 0;
@@ -1132,9 +1088,7 @@ footer a {
         margin-right: 11rem;
     }
 
-
-
-    /* -------contact us------------*/
+/* -------contact us------------*/
 
         #contact h3 {
             padding-left: 2rem
@@ -1239,14 +1193,8 @@ footer a {
             border: 3px solid var(--purple);
            
         }
-        
-        .custom-select {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        
-        select {
+
+	select {
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -1255,10 +1203,14 @@ footer a {
             max-width: calc(100% - 5px);
             
         }
+	
+	.custom-select {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
         
-        
-        
-        .custom-select::after {
+     	.custom-select::after {
             z-index: 5;
             position: relative;
             content: "";
@@ -1271,8 +1223,7 @@ footer a {
             margin-left: -45px;
         }
         
-        
-        select::-ms-expand {
+         select::-ms-expand {
             display: none;
         }
         #contact input[type="submit"] {
