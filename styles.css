@@ -912,7 +912,16 @@ footer a {
     #testimonials h3 {
     width: 100%;
     text-align: left;
+
     }
+
+    #testimonials h4 {
+    font-size:13pt;
+    }
+    #testimonials p {
+    font-size: 13pt;
+    }
+
 
     #testimonials div {
     display: grid;
